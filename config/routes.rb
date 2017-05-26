@@ -52,5 +52,10 @@ Rails.application.routes.draw do
   get "/delete_photo/:id", :controller => "photos", :action => "destroy"
   #------------------------------
 
+  get("/users", {:controller => "users", :action => "index"})
+  get("/users/:id", {:controller => "users", :action => "show"})
+
+  get("/my_likes", {:controller => "my_likes", :action => "index"})
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
